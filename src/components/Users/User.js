@@ -3,8 +3,9 @@ import { Link, useParams } from 'react-router-dom'
 
 function User (props) {
   const selectedUserId = parseInt(useParams().id);
+  const isSelected = selectedUserId === props.user.id;
 
-  const isSelected = selectedUserId === props.user.id
+  console.log(isSelected);
 
   return (
     <li className={`list-group-item ${isSelected ? 'list-group-item-info' : ''}`}>

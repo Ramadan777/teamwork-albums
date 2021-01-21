@@ -5,8 +5,7 @@ import { loadPhotos } from '../../redux/actions'
 import Photo from './Photo'
 
 function Photos (props) {
-  const params = parseInt(useParams().id)
-
+  const params = parseInt(useParams().id);
   const photos = useSelector(state => state.photos.items);
   const dispatch = useDispatch();
 
@@ -14,21 +13,20 @@ function Photos (props) {
     if (params !== undefined) {
       dispatch(loadPhotos(params))
     }
-  }, [params])
+  }, [dispatch, params]);
 
   if (isNaN(params)) {
     return (
-      <div>Выберите альбом...</div>
+      <div className="photo-text">Выберите альбом...</div>
     )
   }
-
 
   return (
     <div className="photos">
       <div className="row align-items-center justify-content-center">
         {photos.map((photo) => {
           return (
-            <Photo key={photo.id} photo={photo}/>
+            <Photo key={photo.id} photo={photo} />
           )
         })}
       </div>

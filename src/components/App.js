@@ -4,8 +4,8 @@ import { useEffect } from 'react'
 import { loadUsers } from '../redux/actions'
 import Users from './Users'
 import Albums from './Albums'
-import Photos from './Photos'
 import { Route } from 'react-router-dom'
+import Photos from './Photos'
 
 function App() {
   const dispatch = useDispatch();
@@ -17,32 +17,34 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Route path={"/:id?"}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-3 users">
-              List of users
-            </div>
-            <div className="col-3 albums">
-              List of albums
-            </div>
-            <div className="col-6 photos">
-              List of photos
-            </div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-3 users">
+            List of users
           </div>
-          <div className="row">
-            <div className="col-3">
-              <Users />
-            </div>
-            <div className="col-3">
-              <Albums />
-            </div>
-            <div className="col-6">
-              <Photos />
-            </div>
+          <div className="col-3 albums">
+            List of albums
+          </div>
+          <div className="col-6 photos">
+            List of photos
           </div>
         </div>
-      </Route>
+        <div className="row">
+          <div className="col-3">
+            <Users />
+          </div>
+          <div className="col-3">
+            <Route path={`/:id?`}>
+              <Albums />
+            </Route>
+          </div>
+          <div className="col-6">
+            <Route path={`/:userId?/:id?`}>
+              <Photos />
+            </Route>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
