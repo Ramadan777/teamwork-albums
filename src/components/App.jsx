@@ -1,6 +1,6 @@
 import Header from './Header';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { loadUsers } from '../redux/actions';
 import Users from './Users';
 import Albums from './Albums';

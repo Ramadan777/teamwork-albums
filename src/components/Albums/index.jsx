@@ -4,7 +4,7 @@ import { loadAlbums } from '../../redux/actions';
 import { useParams } from 'react-router-dom';
 import Album from './Album';
 
-function Albums(props) {
+function Albums() {
   const dispatch = useDispatch();
   const params = useParams().id;
 

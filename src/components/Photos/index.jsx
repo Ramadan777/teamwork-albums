@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { loadPhotos } from '../../redux/actions';
 import Photo from './Photo';
 
-function Photos(props) {
+function Photos() {
   const params = parseInt(useParams().id);
   const photos = useSelector((state) => state.photos.items);
   const dispatch = useDispatch();
