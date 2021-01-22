@@ -26,6 +26,10 @@
     padding: 20px 0;
 }
 
+.album, .user {
+    list-style: none;
+}
+
 .photos {
     text-align: center;
     font-size: 25px;
