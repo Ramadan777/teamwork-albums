@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import User from './User';
 import ReactLoading from 'react-loading';
 
-function Users(props) {
+function Users() {
   const users = useSelector((state) => state.users.items);
   const loading = useSelector(state => state.users.loading);
 

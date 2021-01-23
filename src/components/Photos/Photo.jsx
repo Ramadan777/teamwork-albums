@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+
 
 function Photo(props) {
   return (
@@ -6,6 +8,10 @@ function Photo(props) {
       <img src={props.photo.thumbnailUrl} alt="" />
     </div>
   );
+}
+
+Photo.propTypes = {
+  url: PropTypes.string.isRequired,
 }
 
 export default Photo;
