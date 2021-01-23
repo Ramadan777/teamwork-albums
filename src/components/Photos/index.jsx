@@ -8,7 +8,7 @@ import ReactLoading from 'react-loading';
 function Photos() {
   const params = parseInt(useParams().id);
   const photos = useSelector((state) => state.photos.items);
-  const loading = useSelector(state => state.photos.loading);
+  const loading = useSelector((state) => state.photos.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,15 +23,13 @@ function Photos() {
 
   if (loading) {
     return (
-      <div className='preload-photos'>
+      <div className="preload-photos">
+        <div>Идет загрузка...</div>
         <div>
-          Идет загрузка...
-        </div>
-        <div>
-          <ReactLoading type='spin' color='green' height={100} width={100} />
+          <ReactLoading type="spin" color="green" height={100} width={100} />
         </div>
       </div>
-    )
+    );
   }
 
   return (

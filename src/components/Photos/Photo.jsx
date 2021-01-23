@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-
+import PropTypes from 'prop-types';
 
 function Photo(props) {
   return (
@@ -12,6 +11,6 @@ function Photo(props) {
 
 Photo.propTypes = {
   url: PropTypes.string.isRequired,
-}
+};
 
 export default Photo;

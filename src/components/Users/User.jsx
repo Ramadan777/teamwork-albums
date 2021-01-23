@@ -20,7 +20,7 @@ function User(props) {
 User.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
-  email: PropTypes.string
-}
+  email: PropTypes.string,
+};
 
 export default User;

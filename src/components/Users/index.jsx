@@ -5,19 +5,17 @@ import ReactLoading from 'react-loading';
 
 function Users() {
   const users = useSelector((state) => state.users.items);
-  const loading = useSelector(state => state.users.loading);
+  const loading = useSelector((state) => state.users.loading);
 
   if (loading) {
     return (
-      <div className='preload-users'>
+      <div className="preload-users">
+        <div>Идет загрузка...</div>
         <div>
-          Идет загрузка...
-        </div>
-        <div>
-          <ReactLoading type='spin' color='green' height={100} width={100} />
+          <ReactLoading type="spin" color="green" height={100} width={100} />
         </div>
       </div>
-    )
+    );
   }
 
   return (

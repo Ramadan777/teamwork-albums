@@ -10,7 +10,7 @@ function Albums() {
   const params = useParams().id;
 
   const albums = useSelector((state) => state.albums.items);
-  const loading = useSelector(state => state.albums.loading);
+  const loading = useSelector((state) => state.albums.loading);
 
   useEffect(() => {
     dispatch(loadAlbums(params));
@@ -22,15 +22,13 @@ function Albums() {
 
   if (loading) {
     return (
-      <div className='preload-users'>
+      <div className="preload-users">
+        <div>Идет загрузка...</div>
         <div>
-          Идет загрузка...
-        </div>
-        <div>
-          <ReactLoading type='spin' color='green' height={100} width={100} />
+          <ReactLoading type="spin" color="green" height={100} width={100} />
         </div>
       </div>
-    )
+    );
   }
 
   return (
