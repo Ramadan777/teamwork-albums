@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { loadPhotos } from '../../redux/actions';
 import Photo from './Photo';
+import ReactLoading from 'react-loading';
 
 function Photos() {
   const params = parseInt(useParams().id);
   const photos = useSelector((state) => state.photos.items);
+  const loading = useSelector(state => state.photos.loading);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,6 +19,19 @@ function Photos() {
 
   if (isNaN(params)) {
     return <div className="photo-text">Выберите альбом...</div>;
+  }
+
+  if (loading) {
+    return (
+      <div className='preload-photos'>
+        <div>
+          Идет загрузка...
+        </div>
+        <div>
+          <ReactLoading type='spin' color='green' height={100} width={100} />
+        </div>
+      </div>
+    )
   }
 
   return (
