@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Album(props) {
   return (
@@ -14,5 +15,10 @@ function Album(props) {
     </li>
   );
 }
+
+Album.propTypes = {
+  userId: PropTypes.number,
+  title: PropTypes.string,
+};
 
 export default Album;
