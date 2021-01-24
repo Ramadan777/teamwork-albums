@@ -16,7 +16,7 @@ function App() {
     dispatch(loadUsers());
   }, [dispatch]);
 
-  if(hidingAlbums || hidingUsers) {
+  if (hidingAlbums || hidingUsers) {
     return (
       <div className="app">
         <Header />
