@@ -2,10 +2,6 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { hidingAlbumsAndUsers } from '../redux/actions';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7b93955b158d8e37038d982ed843e88a97a256ae
 function Header(props) {
   const hidingUsers = useSelector((state) => state.users.hiding);
   const hidingAlbums = useSelector((state) => state.albums.hiding);
@@ -27,10 +23,7 @@ function Header(props) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }
-=======
->>>>>>> 7b93955b158d8e37038d982ed843e88a97a256ae
 
 export default Header;
