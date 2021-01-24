@@ -48,3 +48,9 @@ export const loadPhotos = (id) => {
       });
   };
 };
+
+export const hidingAlbumsAndUsers = () => {
+  return {
+    type: 'users/albums/hiding',
+  };
+};
