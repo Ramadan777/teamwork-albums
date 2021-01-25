@@ -54,3 +54,9 @@ export const hideShow = () => {
     dispatch({ type: 'show' })
   }
 }
+
+export const hidingAlbumsAndUsers = () => {
+  return {
+    type: 'users/albums/hiding',
+  };
+};

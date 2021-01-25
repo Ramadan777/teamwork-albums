@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Photo(props) {
   return (
@@ -7,5 +8,9 @@ function Photo(props) {
     </div>
   );
 }
+
+Photo.propTypes = {
+  url: PropTypes.string.isRequired,
+};
 
 export default Photo;

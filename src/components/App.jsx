@@ -8,6 +8,8 @@ import { Route } from 'react-router-dom';
 import Photos from './Photos';
 
 function App() {
+  const hidingUsers = useSelector((state) => state.users.hiding);
+  const hidingAlbums = useSelector((state) => state.albums.hiding);
   const dispatch = useDispatch();
   const show = useSelector(state => state.show.show);
 
@@ -17,9 +19,9 @@ function App() {
 
   const hide = () => {
     dispatch(hideShow());
-  }
 
-  return (
+  if(hidingAlbums || hidingUsers) {
+    return (
     <div className={`app ${show ? 'showTheme' : ''}`}>
       <button onClick={hide}>
         {show ? "🌞" : "🌛"}
@@ -49,6 +51,7 @@ function App() {
       </div>
     </div>
   );
+  }
 }
 
 export default App;
