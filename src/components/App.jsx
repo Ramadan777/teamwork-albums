@@ -1,7 +1,7 @@
 import Header from './Header';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { loadUsers } from '../redux/actions';
+import { hideShow, loadUsers } from '../redux/actions';
 import Users from './Users';
 import Albums from './Albums';
 import { Route } from 'react-router-dom';
@@ -9,13 +9,22 @@ import Photos from './Photos';
 
 function App() {
   const dispatch = useDispatch();
+  const show = useSelector(state => state.show.show);
 
   useEffect(() => {
     dispatch(loadUsers());
   }, [dispatch]);
 
+  const hide = () => {
+    dispatch(hideShow());
+  }
+
   return (
-    <div className="app">
+    <div className={`app ${show ? 'showTheme' : ''}`}>
+      <button onClick={hide} aria-label="Переключить светлую/темную тему" type="button"
+      title="Переключить светлую/темную тему">
+        {show ? "🌞" : "🌛"}
+      </button>
       <Header />
       <div className="container-fluid">
         <div className="row">

@@ -42,12 +42,32 @@
   font-size: 20px;
 }
 
-.user-text {
+.user-text, .photo-text {
   text-align: center;
   font-size: 20px;
+  color: darkblue;
 }
 
-.photo-text {
-  text-align: center;
-  font-size: 20px;
+.showTheme {
+  background-color: #121212;
+}
+
+.showTheme .header {
+  background-color: #222222;
+}
+
+.showTheme li {
+  background-color: #222222;
+}
+
+.app button {
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  top: 30px;
+  right: 10px;
+  font-size: 15px;
 }
