@@ -21,8 +21,7 @@ function App() {
 
   return (
     <div className={`app ${show ? 'showTheme' : ''}`}>
-      <button onClick={hide} aria-label="Переключить светлую/темную тему" type="button"
-      title="Переключить светлую/темную тему">
+      <button onClick={hide}>
         {show ? "🌞" : "🌛"}
       </button>
       <Header />
