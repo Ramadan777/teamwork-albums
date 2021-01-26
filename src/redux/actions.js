@@ -49,6 +49,12 @@ export const loadPhotos = (id) => {
   };
 };
 
+export const hideShow = () => {
+  return (dispatch) => {
+    dispatch({ type: 'show' });
+  };
+};
+
 export const hidingAlbumsAndUsers = () => {
   return {
     type: 'users/albums/hiding',
