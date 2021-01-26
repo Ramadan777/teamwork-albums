@@ -22,10 +22,28 @@ function App() {
   }
 
   if(hidingAlbums || hidingUsers) {
+    return (
+      <div className={`app ${show ? 'showTheme' : ''}`}>
+        <button className='button' onClick={hide}>
+          {show ? "🌞" : "🌛"}
+        </button>
+        <Header />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <Route path={`/:userId?/:id?`}>
+                <Photos />
+              </Route>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
     return (
     <div className={`app ${show ? 'showTheme' : ''}`}>
-      <button onClick={hide}>
+      <button className='button' onClick={hide}>
         {show ? "🌞" : "🌛"}
       </button>
       <Header />
@@ -53,7 +71,6 @@ function App() {
       </div>
     </div>
   );
-  }
 }
 
 export default App;

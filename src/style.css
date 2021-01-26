@@ -102,3 +102,7 @@
 .preload-photos {
   margin-left: 250px;
 }
+
+.button {
+  z-index: 1;
+}
