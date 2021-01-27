@@ -17,9 +17,9 @@ function Header() {
       ALBUMS
       <div onClick={changeHiding} className="icon">
         {hidingUsers || hidingAlbums ? (
-          <i className="fa fa-arrow-left" aria-hidden="true"/>
+          <i className="fa fa-arrow-left" aria-hidden="true" />
         ) : (
-          <i className="fa fa-align-left" aria-hidden="true"/>
+          <i className="fa fa-align-left" aria-hidden="true" />
         )}
       </div>
     </div>

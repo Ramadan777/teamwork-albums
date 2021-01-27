@@ -11,7 +11,7 @@ function App() {
   const hidingUsers = useSelector((state) => state.users.hiding);
   const hidingAlbums = useSelector((state) => state.albums.hiding);
   const dispatch = useDispatch();
-  const show = useSelector(state => state.show.show);
+  const show = useSelector((state) => state.show.show);
 
   useEffect(() => {
     dispatch(loadUsers());
@@ -19,13 +19,13 @@ function App() {
 
   const hide = () => {
     dispatch(hideShow());
-  }
+  };
 
-  if(hidingAlbums || hidingUsers) {
+  if (hidingAlbums || hidingUsers) {
     return (
       <div className={`app ${show ? 'showTheme' : ''}`}>
-        <button className='button' onClick={hide}>
-          {show ? "🌞" : "🌛"}
+        <button className="button" onClick={hide}>
+          {show ? '🌞' : '🌛'}
         </button>
         <Header />
         <div className="container-fluid">
@@ -38,13 +38,13 @@ function App() {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
-    return (
+  return (
     <div className={`app ${show ? 'showTheme' : ''}`}>
-      <button className='button' onClick={hide}>
-        {show ? "🌞" : "🌛"}
+      <button className="button" onClick={hide}>
+        {show ? '🌞' : '🌛'}
       </button>
       <Header />
       <div className="container-fluid">
