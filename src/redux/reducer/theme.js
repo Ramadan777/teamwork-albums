@@ -4,6 +4,8 @@ const initialState = {
 
 const themeReducer = (state = initialState, action) => {
   switch (action.type) {
+    //fixme название кейса должно быть theme/show, чтобы соответствовал
+    // принятому именованию
     case 'show':
       return {
         ...state,

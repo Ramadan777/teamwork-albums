@@ -1,7 +1,8 @@
 const initialState = {
   items: [],
   loading: false,
-  hiding: false,
+  hiding: false, //fixme лучше назвать просто hide либо hidden (непонятно
+  // почему этот ключ находится в двух редюсерах
 };
 
 const usersReducer = (state = initialState, action) => {

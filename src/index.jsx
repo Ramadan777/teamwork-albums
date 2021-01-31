@@ -18,3 +18,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
+
+/**
+ * fixme
+ * .eslint добавлен в гитигнор не верно и
+ * при изменении он снова попадает в коммит
+ * */

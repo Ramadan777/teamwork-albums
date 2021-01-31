@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import React from 'react';
 import PropTypes from 'prop-types';
+import Photo from '../Photos/Photo'; //fixme неиспользуемый код
 
 function Album(props) {
   return (
@@ -15,6 +16,8 @@ function Album(props) {
     </li>
   );
 }
+
+//fixme неверно указаны типы (см замечание в компоненте User)
 
 Album.propTypes = {
   userId: PropTypes.number,

@@ -17,6 +17,8 @@ function User(props) {
   );
 }
 
+//fixme неверно указаны пропстайпы, этот компонент принимает один пропс - user
+//а здесь указано, что принимает три пропса
 User.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,

@@ -50,6 +50,7 @@ export const loadPhotos = (id) => {
 };
 
 export const hideShow = () => {
+  //fixme здесь не нужно использовать санк, подойдет обычный экшнкреатер
   return (dispatch) => {
     dispatch({ type: 'show' });
   };

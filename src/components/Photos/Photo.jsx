@@ -9,6 +9,7 @@ function Photo(props) {
   );
 }
 
+//fixme неверно указаны типы (см замечание в компоненте User)
 Photo.propTypes = {
   url: PropTypes.string.isRequired,
 };
