@@ -24,6 +24,7 @@ function App() {
   if (hidingAlbums || hidingUsers) {
     return (
       <div className={`app ${show ? 'showTheme' : ''}`}>
+        {/*fixme переключение темы относится к хедеру, поэтому должно быть в этом компоненте*/}
         <button className="button" onClick={hide}>
           {show ? '🌞' : '🌛'}
         </button>
@@ -40,6 +41,8 @@ function App() {
       </div>
     );
   }
+
+  //fixme повторяющийся код, нужно исправить
 
   return (
     <div className={`app ${show ? 'showTheme' : ''}`}>

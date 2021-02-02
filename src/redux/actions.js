@@ -50,9 +50,7 @@ export const loadPhotos = (id) => {
 };
 
 export const hideShow = () => {
-  return (dispatch) => {
-    dispatch({ type: 'show' });
-  };
+  return { type: 'theme/show' };
 };
 
 export const hidingAlbumsAndUsers = () => {

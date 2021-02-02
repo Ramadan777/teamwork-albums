@@ -16,9 +16,9 @@ function Album(props) {
   );
 }
 
+
 Album.propTypes = {
-  userId: PropTypes.number,
-  title: PropTypes.string,
+  album: PropTypes.object,
 };
 
 export default Album;

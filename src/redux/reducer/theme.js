@@ -4,7 +4,7 @@ const initialState = {
 
 const themeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'show':
+    case 'theme/show':
       return {
         ...state,
         show: !state.show,

@@ -18,9 +18,7 @@ function User(props) {
 }
 
 User.propTypes = {
-  id: PropTypes.number,
-  name: PropTypes.string,
-  email: PropTypes.string,
+  user: PropTypes.object,
 };
 
 export default User;
