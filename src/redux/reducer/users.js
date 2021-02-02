@@ -1,7 +1,7 @@
 const initialState = {
   items: [],
   loading: false,
-  hiding: false, //fixme лучше назвать просто hide либо hidden (непонятно
+  hidden: false, //fixme лучше назвать просто hide либо hidden (непонятно
   // почему этот ключ находится в двух редюсерах
 };
 
@@ -23,7 +23,7 @@ const usersReducer = (state = initialState, action) => {
     case 'users/albums/hiding':
       return {
         ...state,
-        hiding: !state.hiding,
+        hidden: !state.hidden,
       };
 
     default:

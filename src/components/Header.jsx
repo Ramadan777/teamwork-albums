@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { hidingAlbumsAndUsers } from '../redux/actions';
 
 function Header() {
-  const hidingUsers = useSelector((state) => state.users.hiding);
-  const hidingAlbums = useSelector((state) => state.albums.hiding);
+  const hidingUsers = useSelector((state) => state.users.hidden);
 
   const dispatch = useDispatch();
 
@@ -16,7 +15,7 @@ function Header() {
     <div className="header">
       ALBUMS
       <div onClick={changeHiding} className="icon">
-        {hidingUsers || hidingAlbums ? (
+        {hidingUsers ? (
           <i className="fa fa-arrow-left" aria-hidden="true" />
         ) : (
           <i className="fa fa-align-left" aria-hidden="true" />
