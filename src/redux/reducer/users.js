@@ -1,7 +1,7 @@
 const initialState = {
   items: [],
   loading: false,
-  hiding: false,
+  hidden: false,
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -22,7 +22,7 @@ const usersReducer = (state = initialState, action) => {
     case 'users/albums/hiding':
       return {
         ...state,
-        hiding: !state.hiding,
+        hidden: !state.hidden,
       };
 
     default:

@@ -15,7 +15,7 @@ const rootReducer = combineReducers({
   users: usersReducer,
   albums: albumsReducer,
   photos: photosReducer,
-  show: themeReducer, //fixme путаница с названием редюсера и названием функции
+  theme: themeReducer,
 });
 
 const preloadedState = JSON.parse(localStorage.getItem('theme'));
@@ -27,7 +27,7 @@ const store = createStore(
 );
 
 store.subscribe(() => {
-  localStorage.setItem('theme', JSON.stringify(store.getState().show));
+  localStorage.setItem('theme', JSON.stringify(store.getState()));
 });
 
 export default store;
