@@ -70,6 +70,10 @@
   color: darkblue;
 }
 
+.list-group-item-info {
+  text-decoration: none;
+}
+
 .showTheme {
   background-color: #121212;
 }

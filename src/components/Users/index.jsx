@@ -12,7 +12,7 @@ function Users() {
       <div className="preload-users">
         <div>Идет загрузка...</div>
         <div>
-          <ReactLoading type="spin" color="green" height={100} width={100} />
+          <ReactLoading type="spin" color="green" height={50} width={50} />
         </div>
       </div>
     );
